@@ -1,0 +1,159 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Sandhata.eCommerce.Models
+@model Product
+
+@{
+    ViewData["Title"] = "Products Details of - " + Model.ProductName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    double discountPrice = Model.UnitPrice - (Model.UnitPrice * Model.Discount / 100.0);
+}
+
+<h1>Details of the Product - @Model.ProductName</h1>
+<hr />
+
+<div class="container mt-5">
+    <div class="row mb-5 p-3 border rounded shadow-sm">
+        <!-- Left Image Section -->
+        <div class="col-md-6">
+            <img src="~/@Model.Picture" class="img-fluid rounded shadow-sm mb-3" style="max-height: 400px;" alt="@Model.ProductName" />
+            <div class="d-flex">
+                @for (int i = 0; i < 4; i++)
+                {
+                    <img src="~/@Model.Picture" class="img-thumbnail me-2" style="width: 80px; height: 80px;" alt="@Model.ProductName" />
+                }
+            </div>
+        </div>
+
+        <!-- Right Details Section -->
+        <div class="col-md-6">
+            <h2>@Model.ProductName</h2>
+            <p class="text-muted">@Model.Description</p>
+
+            <hr />
+
+            <!-- Price Section -->
+            <h4>
+                <span class="text-muted" style="text-decoration: line-through;">₹@Model.UnitPrice</span>
+                <span class="text-danger fw-bold ms-2">₹@string.Format("{0:0.00}", discountPrice)</span>
+                <span class="badge bg-success ms-2">@Model.Discount% OFF</span>
+            </h4>
+
+            <hr />
+
+            <!-- Size Selection -->
+            <form asp-area="Carts" asp-controller="Home" asp-action="AddToCart" method="post">
+                <input type="hidden" name="productId" value="@Model.ProductId" />
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Size: <span id="selectedSizeText">10 UK</span></label>
+                    <div class="d-flex flex-wrap gap-2 mt-2">
+                        @foreach (var size in new[] { "6 UK", "7 UK", "8 UK", "9 UK", "10 UK", "11 UK" })
+                        {
+                            <button type="button" class="btn btn-outline-secondary size-btn" data-size="@size">@size</button>
+                        }
+                    </div>
+                    <input type="hidden" id="selectedSizeInput" name="size" value="10 UK" />
+                </div>
+
+                <!-- Add to Cart Button Section -->
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-dark btn-sm">Add To Cart</button>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Back to Products</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        const sizeInput = document.getElementById('selectedSizeInput');
+        const sizeText = document.getElementById('selectedSizeText');
+
+        sizeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeButtons.forEach(b => b.classList.remove('btn-primary', 'active'));
+                btn.classList.add('btn-primary', 'active');
+                sizeInput.value = btn.dataset.size;
+                sizeText.innerText = btn.dataset.size;
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+
+@* @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Sandhata.eCommerce.Models
+@model Product
+
+@{
+    ViewData["Title"] = "Products Details of - " + Model.ProductName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    double discountPrice = Model.UnitPrice - (Model.UnitPrice * Model.Discount / 100.0);
+}
+
+<h1>Details of the Product - @Model.ProductName</h1>
+<hr />
+
+<div class="container mt-5">
+    <div class="row mb-5 p-3 border rounded shadow-sm">
+        <!-- Left Image Section -->
+        <div class="col-md-6">
+            <img src="~/@Model.Picture" class="img-fluid rounded shadow-sm mb-3" style="max-height: 400px;" alt="@Model.ProductName" />
+            <div class="d-flex">
+                @for (int i = 0; i < 4; i++)
+                {
+                    <img src="~/@Model.Picture" class="img-thumbnail me-2" style="width: 80px; height: 80px;" alt="@Model.ProductName" />
+                }
+            </div>
+        </div>
+
+        <!-- Right Details Section -->
+        <div class="col-md-6">
+            <h2>@Model.ProductName</h2>
+            <p class="text-muted">@Model.Description</p>
+
+            <hr />
+
+            <!-- Price Section -->
+            <h4>
+                <span class="text-muted" style="text-decoration: line-through;">₹@Model.UnitPrice</span>
+                <span class="text-danger fw-bold ms-2">₹@string.Format("{0:0.00}", discountPrice)</span>
+                <span class="badge bg-success ms-2">@Model.Discount% OFF</span>
+            </h4>
+
+            <hr />
+
+            <!-- Size Selection -->
+            <div class="mb-4">
+                <label class="form-label fw-bold">Size: <span id="selectedSize">10 UK</span></label>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <button type="button" class="btn btn-outline-secondary size-btn" data-size="6 UK">6 UK</button>
+                    <button type="button" class="btn btn-outline-secondary size-btn" data-size="7 UK">7 UK</button>
+                    <button type="button" class="btn btn-outline-secondary size-btn" data-size="8 UK">8 UK</button>
+                    <button type="button" class="btn btn-outline-secondary size-btn" data-size="9 UK">9 UK</button>
+                    <button type="button" class="btn btn-primary size-btn active" data-size="10 UK">10 UK</button>
+                    <button type="button" class="btn btn-outline-secondary size-btn" data-size="11 UK">11 UK</button>
+                </div>
+                <input type="hidden" id="selectedSizeInput" name="selectedSize" value="10 UK" />
+            </div>
+
+            <!-- Add to Cart Button Section -->
+            <div class="mt-4">
+                <a class="btn btn-dark btn-sm"
+                   asp-area="Carts"
+                   asp-controller="Home"
+                   asp-action="AddToCart"
+                   asp-route-productId="@Model.ProductId">Add To Cart</a>
+                <a class="btn btn-outline-secondary" asp-action="Index">Back to Products</a>
+            </div>
+        </div>
+    </div>
+</div> *@

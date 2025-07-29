@@ -1,0 +1,416 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <hr/>
+
+    <h3>Session Id - @Context.Session.Id</h3>
+</div>
+ *@
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #34495e;
+        --accent-color: #e74c3c;
+        --light-gray: #ecf0f1;
+        --dark-gray: #95a5a6;
+        --white: #ffffff;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: var(--white);
+        padding: 80px 0;
+        margin-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.1;
+        }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .brand-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .brand-subtitle {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    .cta-buttons {
+        margin-top: 40px;
+    }
+
+    .btn-primary-custom {
+        background: var(--accent-color);
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+
+        .btn-primary-custom:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+    .btn-outline-custom {
+        border: 2px solid var(--white);
+        color: var(--white);
+        background: transparent;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+
+        .btn-outline-custom:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+    .features-section {
+        padding: 60px 0;
+        background: var(--light-gray);
+    }
+
+    .feature-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        border-top: 4px solid var(--accent-color);
+    }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px;
+        background: linear-gradient(135deg, var(--accent-color), #e67e22);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .feature-description {
+        color: var(--dark-gray);
+        line-height: 1.6;
+    }
+
+    .categories-section {
+        padding: 80px 0;
+        background: var(--white);
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--dark-gray);
+        margin-bottom: 60px;
+    }
+
+    .category-card {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 20px;
+        padding: 60px 30px;
+        text-align: center;
+        color: var(--white);
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+    .category-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .category-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .category-count {
+        font-size: 1rem;
+        opacity: 0.8;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stats-section {
+        background: var(--accent-color);
+        color: var(--white);
+        padding: 60px 0;
+    }
+
+    .stat-item {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .session-info {
+        background: var(--light-gray);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'Courier New', monospace;
+        color: var(--secondary-color);
+    }
+
+    .pulse {
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse 2s infinite;
+    }
+
+    .fade-in {
+        -webkit-animation: fadeIn 1s ease-in;
+        animation: fadeIn 1s ease-in;
+    }
+
+    /* Mobile Responsive */
+    .mobile-title {
+        font-size: 2.5rem;
+    }
+
+    .mobile-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .mobile-btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .mobile-feature {
+        margin-bottom: 20px;
+    }
+</style>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content text-center fade-in">
+            <h1 class="brand-title">.NET.eCommerce</h1>
+            <p class="brand-subtitle">Built with ASP.NET Core MVC - Modern eCommerce Solution</p>
+            <p class="lead">Developed using ASP.NET Core MVC framework with Entity Framework Core, featuring user authentication, product management, and responsive design for a basic online shopping experience.</p>
+
+            <div class="cta-buttons">
+                <a href="/Products" class="btn btn-primary-custom pulse">Shop Now</a>
+                <a href="/Categories" class="btn btn-outline-custom">Browse Categories</a>
+            </div>
+        </div>
+    </div>
+</section>
+@* 
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Free Delivery</h3>
+                    <p class="feature-description">Enjoy complimentary shipping on all orders above ₹999. Fast and secure delivery to your doorstep.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Easy Returns</h3>
+                    <p class="feature-description">Not satisfied? Return your purchase within 30 days for a full refund. No questions asked.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Premium Quality</h3>
+                    <p class="feature-description">Handpicked shoes from trusted brands. Quality guaranteed with every step you take.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+@* <!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Find the perfect pair for every lifestyle and occasion</p>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">👔</div>
+                    <h3 class="category-title">Formal</h3>
+                    <p class="category-count">Professional & Business</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3 class="category-title">Casual</h3>
+                    <p class="category-count">Everyday Comfort</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">🏃</div>
+                    <h3 class="category-title">Sports</h3>
+                    <p class="category-count">Athletic & Performance</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">👠</div>
+                    <h3 class="category-title">Fashion</h3>
+                    <p class="category-count">Trendy & Stylish</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+@* <!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Shoe Models</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Premium Brands</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Satisfaction Rate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+<!-- Session Information -->
+<div class="container">
+    <div class="session-info">
+        <small><strong>Session ID</strong>: @Context.Session.Id</small>
+    </div>
+</div>

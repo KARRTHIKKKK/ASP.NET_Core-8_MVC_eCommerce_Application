@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandhata.eCommerce.Models", "Sandhata.eCommerce.Models\Sandhata.eCommerce.Models.csproj", "{EF721904-C738-4685-941A-C82210D7C962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandhata.eCommerce.Repositories", "Sandhata.eCommerce.Repositories\Sandhata.eCommerce.Repositories.csproj", "{03706279-C561-4238-8B1D-0238277778B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandhata.eCommerce.Mvc.UI", "Sandhata.eCommerce.Mvc.UI\Sandhata.eCommerce.Mvc.UI.csproj", "{90B805F6-5881-4624-9D93-B9A8F9BBD0D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF721904-C738-4685-941A-C82210D7C962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF721904-C738-4685-941A-C82210D7C962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF721904-C738-4685-941A-C82210D7C962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF721904-C738-4685-941A-C82210D7C962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03706279-C561-4238-8B1D-0238277778B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03706279-C561-4238-8B1D-0238277778B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03706279-C561-4238-8B1D-0238277778B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03706279-C561-4238-8B1D-0238277778B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B805F6-5881-4624-9D93-B9A8F9BBD0D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B805F6-5881-4624-9D93-B9A8F9BBD0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B805F6-5881-4624-9D93-B9A8F9BBD0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B805F6-5881-4624-9D93-B9A8F9BBD0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D6CBD17-DD2A-4F2E-B4E3-BB8E29ED4DF5}
+	EndGlobalSection
+EndGlobal

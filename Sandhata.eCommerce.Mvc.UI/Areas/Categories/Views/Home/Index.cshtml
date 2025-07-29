@@ -1,0 +1,156 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Sandhata.eCommerce.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@model List<Category>
+@{
+    ViewData["Title"] = "Categories List!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewBag.PageTitle</h1>
+<hr />
+<p>@ViewBag.PageDescription</p>
+
+@if (Model.Count > 0)
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Show Products</th>
+                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <th>Delete Category</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ALL CATEGORIES Row -->
+            <tr>
+                <td>All Shoes </td>
+                <td>Browse all available shoes from every category in our store</td>
+                <td>
+                    <a class="btn btn-primary"
+                       asp-area="Products"
+                       asp-controller=""
+                       asp-action="">Show Products</a>
+                </td>
+                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <td>
+                        <!-- No delete option for All Categories -->
+                        <span class="text-muted">N/A</span>
+                    </td>
+                }
+            </tr>
+
+            @foreach (Sandhata.eCommerce.Models.Category category in Model)
+            {
+                <tr>
+                    <td>@category.CategoryName</td>
+                    <td>@category.CategoryDescription</td>
+                    <td>
+                        <a class="btn btn-primary"
+                           asp-area="Products"
+                           asp-controller="Home"
+                           asp-action="CategoryWiseProducts"
+                           asp-route-categoryId="@category.CategoryId">Show Products</a>
+                    </td>
+                    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a class="btn btn-danger"
+                               asp-area="Categories"
+                               asp-controller="Home"
+                               asp-action="Delete"
+                               asp-route-categoryId="@category.CategoryId">Delete Category</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>No Category is Available Here!</h3>
+}
+
+
+
+
+@* @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Sandhata.eCommerce.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+@model List<Category>
+@{
+    ViewData["Title"] = "Categories List!";
+    Layout="~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewBag.PageTitle</h1>
+<hr />
+<p>@ViewBag.PageDescription</p>
+
+<!-- ALL SHOES CATEGORIES Button -->
+<div class="mb-4">
+    <a class="btn btn-success btn-lg"
+       asp-area="Products"
+       asp-controller="Home"
+       asp-action="AllProducts">
+        <i class="fas fa-shoe-prints me-2"></i>ALL SHOES CATEGORIES
+    </a>
+</div>
+
+@if (Model.Count>0)
+{
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Category Name</th>
+            <th>Description</th>
+            <th>Show Products</th>
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+            {
+            <th>Delete Category</th>
+            }
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (
+        
+        a.eCommerce.Models.Category category in Model)
+        {
+            <tr>
+                <td>@category.CategoryName</td>
+                <td>@category.CategoryDescription</td>
+                <td>
+                    <a class="btn btn-primary" 
+                    asp-area="Products" 
+                    asp-controller="Home" 
+                    asp-action="CategoryWiseProducts" 
+                    asp-route-categoryId="@category.CategoryId">Show Products</a>
+                </td>
+                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a class="btn btn-danger"
+                       asp-area="Categories"
+                       asp-controller="Home"
+                       asp-action="Delete"
+                       asp-route-categoryId="@category.CategoryId">Delete Category</a>
+                </td>
+                }
+            </tr>
+        }
+    </tbody>
+    </table>
+}
+else
+{
+    <h3>No Category is Available Here!</h3>
+} *@
