@@ -28,7 +28,7 @@ A **modular, full-stack eCommerce web application** built using **ASP.NET Core 8
 ## 🎥 Demo Video
 
 ### YouTube Link
-[![eCommerce Application Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/7XIx_slTZ2g?si=bTdoUwpKe-DkFIme))
+[eCommerce Application Demo([LINK](https://youtu.be/7XIx_slTZ2g?si=bTdoUwpKe-DkFIme)]
 
 ### MP4 File (Repository)
 [![eCommerce Application Demo](./screenshots/video-thumbnail.png)](./demo-video.mp4)
