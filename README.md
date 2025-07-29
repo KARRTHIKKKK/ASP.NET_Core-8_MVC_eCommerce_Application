@@ -6,9 +6,9 @@
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-Latest-red.svg)](https://www.microsoft.com/en-us/sql-server)
 
 ## 📋 Table of Contents
-- [Overview](#overview)
-- [Demo Video](#demo-video)
-- [Features](#features)
+- [Overview](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-overview)
+- [Demo Video](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-demo-video)
+- [Features](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-features)
 - [Technologies Used](#technologies-used)
 - [Solution Architecture](#solution-architecture)
 - [Getting Started](#getting-started)
