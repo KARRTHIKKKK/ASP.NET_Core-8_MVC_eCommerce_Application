@@ -27,13 +27,17 @@ A **modular, full-stack eCommerce web application** built using **ASP.NET Core 8
 
 ## 🎥 Demo Video
 
-[![eCommerce Application Demo](https://youtu.be/7XIx_slTZ2g)]
-(https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/main/eCommerce.mp4)
+### YouTube Link
+[![eCommerce Application Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/7XIx_slTZ2g?si=bTdoUwpKe-DkFIme))
 
-> **Click the image above to watch the full application demonstration**
+### MP4 File (Repository)
+[![eCommerce Application Demo](./screenshots/video-thumbnail.png)](./demo-video.mp4)
 
-*Alternative: [Download Demo Video](./eCommerce.mp4) (if hosted in repository)*
+> **Click above to watch the application demonstration**
 
+### Alternative Links
+- [📺 Watch on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+- [⬇️ Download MP4](./demo-video.mp4)
 ## ✨ Features
 
 ### 🛍️ Core eCommerce Functionality
