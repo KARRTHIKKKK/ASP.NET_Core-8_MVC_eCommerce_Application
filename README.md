@@ -1,1 +1,1 @@
-# ASP .NET MVC eCommerce Web Application 
+# ASP.NET Core 8 MVC eCommerce Application
