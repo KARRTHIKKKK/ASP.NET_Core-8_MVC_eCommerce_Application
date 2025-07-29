@@ -36,7 +36,6 @@ A **modular, full-stack eCommerce web application** built using **ASP.NET Core 8
 - **Product Catalog** - Browse and search products
 - **Shopping Cart** - Add, remove, and manage cart items
 - **User Authentication** - Register, login, and user management
-- **Invoice Generation** - Order processing and invoice creation
 - **Responsive Design** - Mobile-friendly Bootstrap UI
 
 ### 🏗️ Technical Features
@@ -93,80 +92,6 @@ Sandhata.eCommerce.Solution/
 - [Database: Microsoft SQL Server 2019](https://www.microsoft.com/en-in/download/details.aspx?id=101064)
 - [SQL Server Management Studio: SSMS](https://learn.microsoft.com/en-us/ssms/install/install)
 
-## 📦 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/sandhata-ecommerce.git
-   cd sandhata-ecommerce
-   ```
-2. **Restore NuGet packages**
-   ```bash
-   dotnet restore
-   ```
-
-3. **Update database connection string**
-   
-   Edit `appsettings.json` in the `Sandhata.eCommerce.Mvc.UI` project:
-   ```json
-   {
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=SandhataECommerceDb;Trusted_Connection=true;MultipleActiveResultSets=true"
-     }
-   }
-   ```
-
-4. **Run database migrations**
-   ```bash
-   cd Sandhata.eCommerce.Mvc.UI
-   dotnet ef database update
-   ```
-
-5. **Build and run the application**
-   ```bash
-   dotnet build
-   dotnet run
-   ```
-
-6. **Access the application**
-   - Open browser and navigate to `https://localhost:5001`
-
-## ⚙️ Configuration
-
-### Database Configuration
-The application uses **Entity Framework Core** with **Code-First** approach:
-
-```csharp
-// SandhataDbContext.cs
-public class SandhataDbContext : IdentityDbContext
-{
-    public DbSet<Product> Products { get; set; }
-    public DbSet<Cart> Carts { get; set; }
-    public DbSet<Customer> Customers { get; set; }
-    public DbSet<Invoice> Invoices { get; set; }
-}
-```
-
-### Identity Configuration
-ASP.NET Core Identity is configured for user authentication:
-- User registration and login
-- Role-based authorization
-- Secure password policies
-
-## 📱 Usage
-
-### For Users
-1. **Register/Login** - Create account or sign in
-2. **Browse Products** - View product catalog
-3. **Add to Cart** - Select items and quantities
-4. **Checkout** - Review cart and complete purchase
-5. **View Invoices** - Access order history
-
-### For Developers
-- **Adding New Features**: Create new areas under `Areas/` folder
-- **Database Changes**: Add migrations using `dotnet ef migrations add`
-- **Custom Views**: Add Razor views in appropriate area folders
-
 ## 📁 Project Structure
 
 ```
@@ -202,7 +127,7 @@ Sandhata.eCommerce.Mvc.UI/
 - **Products** - Product catalog information
 - **Carts** - Shopping cart items
 - **Customers** - Customer information
-- **Invoices** - Order and billing data
+- **Invoices** - 
 - **AspNetUsers** - Identity user accounts
 
 ### Relationships
