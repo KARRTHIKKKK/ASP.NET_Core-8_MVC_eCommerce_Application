@@ -87,9 +87,11 @@ Sandhata.eCommerce.Solution/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server) (LocalDB, Express, or Full)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) or [VS Code](https://code.visualstudio.com/)
+- [Min 16GB RAM with Windows 10]
+- [IDE: Visual Studio 2022 Community](https://apps.microsoft.com/detail/XPDCFJDKLZJLP8?hl=en-GB&gl=IN&ocid=pdpshare)
+- [Runtime: .NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [Database: Microsoft SQL Server 2019](https://www.microsoft.com/en-in/download/details.aspx?id=101064)
+- [SQL Server Management Studio: SSMS](https://learn.microsoft.com/en-us/ssms/install/install)
 
 ## 📦 Installation
 
@@ -98,7 +100,6 @@ Sandhata.eCommerce.Solution/
    git clone https://github.com/yourusername/sandhata-ecommerce.git
    cd sandhata-ecommerce
    ```
-
 2. **Restore NuGet packages**
    ```bash
    dotnet restore
