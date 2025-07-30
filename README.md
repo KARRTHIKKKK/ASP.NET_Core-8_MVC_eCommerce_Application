@@ -9,17 +9,12 @@
 - [Overview](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-overview)
 - [Demo Video](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-demo-video)
 - [Features](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-features)
-- [Technologies Used](#technologies-used)
-- [Solution Architecture](#solution-architecture)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Database Schema](#database-schema)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+- [Technologies Used](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-technologies-used)
+- [Solution Architecture](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#%EF%B8%8F-solution-architecture)
+- [Getting Started](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-getting-started)
+- [Project Structure](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-project-structure)
+- [Screenshots](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-screenshots)
+- [License](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-license)
 
 ## 🔷 Overview
 
@@ -139,20 +134,6 @@ Sandhata.eCommerce.Mvc.UI/
 ### Add To Cart
 ![Shopping Cart](Cart.png)
 
-<!--
-## 🚀 Future Enhancements
-
-- [ ] Payment gateway integration (Stripe, PayPal)
-- [ ] Admin panel for product management
-- [ ] Order tracking system
-- [ ] Email notifications
-- [ ] Product reviews and ratings
-- [ ] Wishlist functionality
-- [ ] Multi-language support
-- [ ] API endpoints for mobile app
--->
-
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -169,7 +150,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ASP.NET Core team for the excellent framework
 - Bootstrap team for the responsive UI components
 - Entity Framework team for the robust ORM
-- Community contributors and My Trainer : Praveen Dabde
+- Community contributors and My Trainer : _Praveen Dabde_
 
 ---
 
