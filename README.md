@@ -86,11 +86,11 @@ Sandhata.eCommerce.Solution/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Min 16GB RAM with Windows 10]
-- [IDE: Visual Studio 2022 Community](https://apps.microsoft.com/detail/XPDCFJDKLZJLP8?hl=en-GB&gl=IN&ocid=pdpshare)
-- [Runtime: .NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Database: Microsoft SQL Server 2019](https://www.microsoft.com/en-in/download/details.aspx?id=101064)
-- [SQL Server Management Studio: SSMS](https://learn.microsoft.com/en-us/ssms/install/install)
+- Min 16GB RAM with Windows 10
+- IDE     : [Visual Studio 2022 Community](https://apps.microsoft.com/detail/XPDCFJDKLZJLP8?hl=en-GB&gl=IN&ocid=pdpshare)
+- Runtime : [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- Database: [Microsoft SQL Server 2019](https://www.microsoft.com/en-in/download/details.aspx?id=101064)
+- SSMS    : [SQL Server Management Studio:](https://learn.microsoft.com/en-us/ssms/install/install)
 
 ## 📁 Project Structure
 
@@ -120,34 +120,25 @@ Sandhata.eCommerce.Mvc.UI/
 ├── appsettings.json
 └── Program.cs
 ```
-
-## 🗄️ Database Schema
-
-### Core Tables
-- **Products** - Product catalog information
-- **Carts** - Shopping cart items
-- **Customers** - Customer information
-- **Invoices** - 
-- **AspNetUsers** - Identity user accounts
-
-### Relationships
-- Customer → Cart (One-to-Many)
-- Cart → Product (Many-to-One)
-- Customer → Invoice (One-to-Many)
-
 ## 📸 Screenshots
+### 🗄️ Database Schema
+![Home Page](Tables.png)
 
 ### Home Page
-![Home Page](screenshots/home-page.png)
+![Home Page](Home.png)
+
+### Categories Page
+![Categories List](Category.png)
 
 ### Product Catalog
-![Product Catalog](screenshots/products.png)
+![Product Catalog](Product.png)
 
-### Shopping Cart
-![Shopping Cart](screenshots/cart.png)
+### Add To Cart
+![Shopping Cart](Cart.png)
 
-### User Dashboard
-![User Dashboard](screenshots/dashboard.png)
+### Show Details
+![Product Details](Detail.png)
+
 
 ## 🔐 Security Features
 
