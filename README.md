@@ -133,21 +133,13 @@ Sandhata.eCommerce.Mvc.UI/
 ### Product Catalog
 ![Product Catalog](Product.png)
 
-### Add To Cart
-![Shopping Cart](Cart.png)
-
 ### Show Details
 ![Product Details](Detail.png)
 
+### Add To Cart
+![Shopping Cart](Cart.png)
 
-## 🔐 Security Features
-
-- **ASP.NET Core Identity** integration
-- **HTTPS** enforcement
-- **CSRF** protection
-- **SQL Injection** prevention via EF Core
-- **XSS** protection through Razor encoding
-
+<!--
 ## 🚀 Future Enhancements
 
 - [ ] Payment gateway integration (Stripe, PayPal)
@@ -158,14 +150,8 @@ Sandhata.eCommerce.Mvc.UI/
 - [ ] Wishlist functionality
 - [ ] Multi-language support
 - [ ] API endpoints for mobile app
+-->
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📝 License
 
@@ -174,27 +160,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@KARRTHIKKKK](https://github.com/KARRTHIKKKK)
+- LinkedIn: [Kathikeya Pepeti](https://www.linkedin.com/in/karthikeya-pepeti/)
+- Email: karthikeyapepeti05@gmail.com
 
 ## 🙏 Acknowledgments
 
 - ASP.NET Core team for the excellent framework
 - Bootstrap team for the responsive UI components
 - Entity Framework team for the robust ORM
-- Community contributors and tutorials
+- Community contributors and My Trainer : Praveen Dabde
 
 ---
 
 ⭐ **If you found this project helpful, please give it a star!** ⭐
-
-## 📞 Support
-
-If you have any questions or need help with setup, please:
-1. Check the [Issues](https://github.com/yourusername/sandhata-ecommerce/issues) page
-2. Create a new issue with detailed description
-3. Contact via email for urgent matters
 
 ---
 *Built with ❤️ using ASP.NET Core 8*
