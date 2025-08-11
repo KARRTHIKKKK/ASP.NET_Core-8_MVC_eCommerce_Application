@@ -14,7 +14,7 @@
 - [Getting Started](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-getting-started)
 - [Project Structure](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-project-structure)
 - [Screenshots](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-screenshots)
-- [License](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/blob/master/README.md#-license)
+- [License](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/tree/master?tab=MIT-1-ov-file)
 
 ## 🔷 Overview
 
@@ -28,10 +28,10 @@ A **modular, full-stack eCommerce web application** built using **ASP.NET Core 8
 ## ✨ Features
 
 ### 🛍️ Core eCommerce Functionality
-- **Product Catalog** - Browse and search products
-- **Shopping Cart** - Add, remove, and manage cart items
-- **User Authentication** - Register, login, and user management
-- **Responsive Design** - Mobile-friendly Bootstrap UI
+- **Product Catalog** - Details display and Categories wise list 
+- **Shopping Cart** - Add to cart items
+- **User Authentication** - Register, login, and Category management
+- **Responsive Design** - Mobile-friendy UI
 
 ### 🏗️ Technical Features
 - **Modular Architecture** - Area-based feature separation
@@ -136,7 +136,7 @@ Sandhata.eCommerce.Mvc.UI/
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/KARRTHIKKKK/ASP.NET_Core-8_MVC_eCommerce_Application/tree/master?tab=MIT-1-ov-file) file for details.
 
 ## 👨‍💻 Author
 
