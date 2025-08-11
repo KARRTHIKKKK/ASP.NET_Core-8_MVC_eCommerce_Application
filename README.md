@@ -140,7 +140,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Kathikeya Pepeti**
 - GitHub: [@KARRTHIKKKK](https://github.com/KARRTHIKKKK)
 - LinkedIn: [Kathikeya Pepeti](https://www.linkedin.com/in/karthikeya-pepeti/)
 - Email: karthikeyapepeti05@gmail.com
@@ -150,7 +150,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ASP.NET Core team for the excellent framework
 - Bootstrap team for the responsive UI components
 - Entity Framework team for the robust ORM
-- Community contributors and My Trainer : _Praveen Dabde_
+- My Trainer : _Praveen Dabde_
 
 ---
 
